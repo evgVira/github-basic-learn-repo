@@ -21,6 +21,15 @@ jobs:
       - name: print application name
         run: echo "this is app name => ${{ env.APPLICATION_NAME }}"
 
+      - name: show directory info before cloning
+        run: ls -l
+
+      - name: cloning directory
+        run: actions/checkout@v1
+
+      - name: show directory info after cloning
+        run: ls -l
+
   deploy_job:
     runs-on: ubuntu-22.04
     needs: testing_job
