@@ -1,0 +1,21 @@
+name: github-basic-actions
+
+on:
+  push:
+    branches: 
+      - main
+jobs:
+
+  testing_job:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: print hello message from testing_job
+        run: echo "Hello World from testing_job"
+
+  deploy_job:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: print hello message from build_job
+        run: echo "Hello world from build_job"
