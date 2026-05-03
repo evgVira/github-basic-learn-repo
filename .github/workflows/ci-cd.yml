@@ -15,6 +15,7 @@ jobs:
 
   deploy_job:
     runs-on: ubuntu-22.04
+    needs: testing_job
 
     steps:
       - name: print hello message from build_job
